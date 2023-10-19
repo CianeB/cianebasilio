@@ -19,3 +19,4 @@ const GatoQueAcheiNaRua = new GatoModelo({
 })
 
 GatoQueAcheiNaRua.save() .then(console.log("Gato salvo com sucesso"))
+
