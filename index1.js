@@ -22,31 +22,27 @@ async function main() {
     {
         codigo: Number,
         nome: String,
-        preco:Number,
-    })}
-
-    Produto.create({
-        codigo:32,
-        nome:'calca social',
-        preco:89,
-
-        codigo:33,
-        nome:'calca jeans',
-        preco:99,
-
-        codigo:34,
-        nome:'calca legging',
-        preco:59,
-
-        codigo:35,
-        nome:'calca sarja',
-        preco:79,
+        preco:Number
     })
 
+    // Produto.create({
+    //     codigo:33,
+    //     nome:'calca Balão',
+    //     preco:67,
+    // })
+
+
     await Produto.findOneAndUpdate(
-        {preco:99,}
+        {preco:89},
         {preco:120}
         )
 
-        await Produto.findOneAndDelete({preco:59})
+    //     await Produto.findOneAndDelete({preco:59})
+
+        console.log(await Produto.find())
+
+
+}
+
+main()
 
