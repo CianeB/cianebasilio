@@ -12,10 +12,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/test');
 // console.log("Salvou")
 
 
-// async function exibeProdutos() {
-//     console.log(await produto.find())
-// }
-// exibeProdutos()
+
 
 // async function main() {
     const Produto = mongoose.model('Produto',
@@ -24,6 +21,11 @@ mongoose.connect('mongodb://127.0.0.1:27017/test');
         nome: String,
         preco:Number
     })
+
+    async function exibeProdutos() {
+        console.log(await Produto.find())
+    }
+    exibeProdutos()
 
 //     // Produto.create({
 //     //     codigo:33,
@@ -54,15 +56,18 @@ const produtos = [
 ]
 
 async function criaNovoProduto(args){
-    const tamanho = array.length
-    let contador=0
+    const tamanho = args.length;
+    let contador=0;
     while(contador <= tamanho){ 
-        await Produto.create(args[contador])
-        contador++
+        await Produto.create(args[contador]);
+        contador++;
     }
 }
+// criaNovoProduto(produtos)
+
 
 // criaProdutos(produto:"monitor", codigo:1001, preco:300, 0){
 //     await Produto
 // }
+
 
