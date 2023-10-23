@@ -13,15 +13,26 @@ const Produto = mongoose.model('Produto',
 
 
 
+
 // Função Criar Array de Produto
-async function criaNovoProduto(args){
-    const tamanho = args.length;
-    let contador=0;
-    while(contador <= tamanho){ 
-        await Produto.create(args[contador]);
-        contador++;
+// async function criaNovoProduto(args){
+//     const tamanho = args.length;
+//     let contador=0;
+//     while(contador <= tamanho){ 
+//         await Produto.create(args[contador]);
+//         contador++;
+//     }
+// }
+
+
+// Função Criar Array de Produto 1
+async function criaMultiplosProdutos1 (vetorDeProdutos, quantidadeDeProdutos) {
+    let contador = 0
+    while (contador <= quantidadeDeProdutos -1) {
+        criaProdutos
     }
 }
+
 
 // Função Editar
 async function atualizaProduto(nomeAProcurar, novoCodigo, novoNome, novoPreco) {
