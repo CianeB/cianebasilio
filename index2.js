@@ -29,10 +29,47 @@ const Produto = mongoose.model('Produto',
 async function criaMultiplosProdutos1 (vetorDeProdutos, quantidadeDeProdutos) {
     let contador = 0
     while (contador <= quantidadeDeProdutos -1) {
-        criaProdutos
+        criaProduto(vetordeProdutos[contador])
+        contador++
     }
 }
 
+const produtos = [
+    {
+        nome: "Arroz",
+        preco:1,
+        codigo:kasds5d21,
+        disponivel:true,
+    },
+
+    {
+        nome: "Feijao",
+        preco:1,
+        codigo:kasds5d21,
+        disponivel:true,
+    },
+
+    {
+        nome: "Macarrao",
+        preco:1,
+        codigo:kasds5d21,
+        disponivel:true,
+    },
+
+    {
+        nome: "Maizena",
+        preco:1,
+        codigo:kasds5d21,
+        disponivel:true,
+    },
+
+    {
+        nome: "Arroz",
+        preco:1,
+        codigo:kasds5d21,
+        disponivel:true,
+    },
+]
 
 // Função Editar
 async function atualizaProduto(nomeAProcurar, novoCodigo, novoNome, novoPreco) {
